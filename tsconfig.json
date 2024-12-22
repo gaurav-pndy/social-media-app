@@ -1,0 +1,27 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "compilerOptions": {
+    "types": ["@testing-library/jest-dom", "jest", "node"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ES6",
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/hooks/*": ["src/hooks/*"]
+    },
+    "lib": ["esnext", "dom"],
+
+  }
+}
