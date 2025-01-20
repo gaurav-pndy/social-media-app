@@ -15,7 +15,6 @@ import { supabase } from "@/services/supaBaseClient";
 import FollowCard from "./FollowCard";
 
 import { CircleUserRoundIcon, UsersRoundIcon } from "lucide-react";
-import { Link } from "react-router-dom";
 
 interface MobileMenuBarProps {
   followingIds: string[];
@@ -82,11 +81,12 @@ const MobileMenuBar: React.FC<MobileMenuBarProps> = ({ followingIds }) => {
         </NavigationMenuItem>
 
         <NavigationMenuItem className="w-1/2 h-full rounded-lg flex justify-center items-center bg-[#030008] bg-opacity-80 ">
-          <Link to={`/profile/${user?.id}`}>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <CircleUserRoundIcon size={32} />
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuLink
+            href={`/profile/${user?.id}`}
+            className={navigationMenuTriggerStyle()}
+          >
+            <CircleUserRoundIcon size={32} />
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

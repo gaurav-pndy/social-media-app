@@ -64,21 +64,22 @@ const FollowCard: React.FC<FollowCardProps> = ({
         </div>
       </div>
       <div>
-        {!isFollowing ? (
-          <button
-            className="flex items-center bg-purple-900 hover:bg-purple-950 px-4 py-2 rounded text-sm transition-all duration-300"
-            onClick={onFollowClick}
-          >
-            <SlUserFollow /> &nbsp; Follow
-          </button>
-        ) : (
-          <button
-            className="flex items-center bg-gray-900 hover:bg-gray-950 px-4 py-2 rounded-lg text-sm transition-all duration-300"
-            onClick={onUnfollowClick}
-          >
-            <SlUserUnfollow /> &nbsp; Unfollow
-          </button>
-        )}
+        {person.uid !== user?.id &&
+          (!isFollowing ? (
+            <button
+              className="flex items-center bg-purple-900 hover:bg-purple-950 px-4 py-2 rounded text-sm transition-all duration-300"
+              onClick={onFollowClick}
+            >
+              <SlUserFollow /> &nbsp; Follow
+            </button>
+          ) : (
+            <button
+              className="flex items-center bg-gray-900 hover:bg-gray-950 px-4 py-2 rounded-lg text-sm transition-all duration-300"
+              onClick={onUnfollowClick}
+            >
+              <SlUserUnfollow /> &nbsp; Unfollow
+            </button>
+          ))}
       </div>
     </>
   );

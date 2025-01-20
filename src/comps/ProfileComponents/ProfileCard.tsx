@@ -33,8 +33,12 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 
   const { userData } = useFetchUser(isLoggedInUser ? user?.id : currentUserId); // Fetching the details of logged in user from 'users' table using custom hook.
 
-  const [noOfFollowers, setNoOfFollowers] = useState<number>(0);
-  const [noOfFollowing, setNoOfFollowing] = useState<number>(0);
+  const [noOfFollowers, setNoOfFollowers] = useState<number>(
+    followersIds?.length
+  );
+  const [noOfFollowing, setNoOfFollowing] = useState<number>(
+    followingIds?.length
+  );
 
   if (!currentUserId) {
     console.error("User ID is undefined.");
@@ -50,7 +54,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   }, [currentUserId, isFollowingIds, isFollowing]);
 
   useEffect(() => {
-    if (followersIds?.length !== undefined && followingIds?.length) {
+    if (followersIds?.length && followingIds?.length) {
       setNoOfFollowers(followersIds?.length);
       setNoOfFollowing(followingIds?.length);
     }

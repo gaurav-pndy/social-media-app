@@ -54,7 +54,6 @@ const FollowersList: React.FC<FollowersListProps> = ({
     <Dialog>
       <DialogTrigger asChild>
         <span className="cursor-pointer hover:underline">
-          {" "}
           <strong className="text-lg">{noOfFollowers}</strong> followers
         </span>
       </DialogTrigger>
@@ -65,7 +64,7 @@ const FollowersList: React.FC<FollowersListProps> = ({
         </DialogHeader>
 
         <div>
-          {noOfFollowers !== 0 ? (
+          {followersData.length !== 0 ? (
             followersData.map((follower) => (
               <div
                 key={follower?.uid}
