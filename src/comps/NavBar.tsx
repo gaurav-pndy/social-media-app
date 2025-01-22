@@ -3,7 +3,7 @@
 import { useAuth } from "../hooks/useAuth";
 
 const NavBar = () => {
-  const { user, signOut } = useAuth();
+  const { signOut } = useAuth();
 
   const handleSignOut = async () => {
     await signOut();
@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <div className="flex justify-between">
       <h2 className="text-xl w-3/4 md:text-3xl mb-5 ">
-        Hey {user?.user_metadata.username || "there"} ! What's new? 👀
+        <img src="/logo.svg" alt="" className="w-44 md:w-60" />
       </h2>
       <button
         onClick={handleSignOut}

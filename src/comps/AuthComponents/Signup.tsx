@@ -34,7 +34,8 @@ const Signup: React.FC<SignupProps> = ({
 }) => {
   return (
     <div>
-      <h2 className="text-3xl  text-center mb-6 text-white">
+      <img src="/logo.svg" alt="" className="w-44 h-9 mx-auto" />
+      <h2 className="text-3xl  text-center my-6 text-white">
         Create a new Account
       </h2>
       <div className="flex flex-col gap-5 ">
