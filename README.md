@@ -32,7 +32,7 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/gaurav-pndy/social-app.git
+   git clone https://github.com/gaurav-pndy/social-media-app.git
    cd social-app
    ```
 
@@ -108,4 +108,4 @@ yarn start
 
 ## Deployment
 
-**The app is deployed to Vercel for live testing. You can access the live demo [here](https://social-app-nine-gold.vercel.app/)**
+**The app is deployed to Vercel for live testing. You can access the live demo [here](https://social-media-app-flax-chi.vercel.app/)**
